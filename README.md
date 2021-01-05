@@ -1,0 +1,2 @@
+# degironcoli
+second term exercise
