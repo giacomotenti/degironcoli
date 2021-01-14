@@ -11,7 +11,7 @@
     tprnfor = .true.,
     tstress = .true.,
     max_seconds = 42500,
-    forc_conv_thr=1.d-4,
+    forc_conv_thr=1.d-3,
 /
  &SYSTEM
     ibrav = 8,
@@ -24,9 +24,9 @@
     ecutrho= 420
 /
  &ELECTRONS
-    conv_thr = 1.0d-6,
+    conv_thr = 1.0d-7,
     diagonalization = 'david',
-    mixing_beta = 0.5,
+    mixing_beta = 0.6,
 /
  &IONS
     ion_dynamics = 'bfgs',
@@ -63,4 +63,4 @@ I 0.750000 0.668496 0.001126
 I 0.250000 0.331504 0.998874 
 
 K_POINTS {automatic}
-4 4 4 1 1 1
+3 3 3 1 1 1

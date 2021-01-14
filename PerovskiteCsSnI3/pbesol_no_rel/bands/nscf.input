@@ -1,0 +1,60 @@
+&CONTROL
+    title = 'CsSnI3', 
+    calculation = 'nscf',
+    restart_mode = 'from_scratch',
+    verbosity = 'high',
+    prefix = 'CsSnI3',
+    wf_collect = .true.,
+    outdir = './',
+    wfcdir = './',
+    pseudo_dir = '/scratch/gtenti/degironcoli/pseudo',
+    tprnfor = .true.,
+    tstress = .true.,
+    max_seconds = 42500,
+    forc_conv_thr=1.d-4,
+/
+ &SYSTEM
+    ibrav = 8,
+    A = 4.8274412, 
+    B = 10.739858, 
+    C = 18.105619,
+    nat = 20, 
+    ntyp = 3,
+    ecutwfc= 80,
+    ecutrho= 450
+    occupations='tetrahedra'
+/
+ &ELECTRONS
+    conv_thr = 1.0d-6,
+    diagonalization = 'david',
+/
+
+ATOMIC_SPECIES
+   Cs 132.9  Cs.pbe-spn-kjpaw_psl.1.0.0.UPF
+   Sn 118.7  Sn.pbe-dn-kjpaw_psl.1.0.0.UPF
+   I  126.9  I.pbe-n-kjpaw_psl.1.0.0.UPF
+
+ATOMIC_POSITIONS {crystal}
+Cs 0.2500000  0.0831845  0.6702903
+Cs 0.7500000  0.9168155  0.3297097
+Cs 0.2500000  0.5831845  0.8297097
+Cs 0.7500000  0.4168155  0.1702903
+Sn 0.2500000  0.3415242  0.4390952
+Sn 0.7500000  0.6584758  0.5609048
+Sn 0.2500000  0.8415242  0.0609048
+Sn 0.7500000  0.1584758  0.9390952
+I 0.7500000  0.0260947  0.1118531
+I 0.2500000  0.9739053  0.8881469
+I 0.7500000  0.5260947  0.3881469
+I 0.2500000  0.4739053  0.6118531
+I 0.7500000  0.2931260  0.7917177
+I 0.2500000  0.7068740  0.2082823
+I 0.7500000  0.7931260  0.7082823
+I 0.2500000  0.2068740  0.2917177
+I 0.7500000  0.1683044  0.4989516
+I 0.2500000  0.8316956  0.5010484
+I 0.7500000  0.6683044  0.0010484
+I 0.2500000  0.3316956  0.9989516
+
+K_POINTS {automatic}
+10 10 10 1 1 1

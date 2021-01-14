@@ -2,7 +2,7 @@
 #SBATCH --nodes=2            # number of nodes
 #SBATCH --ntasks-per-node=32
 #SBATCH --cpus-per-task=1
-#SBATCH --time 00:40:00         # format: HH:MM:SS
+#SBATCH --time 02:00:00         # format: HH:MM:SS
 #SBATCH --account=gtenti
 #SBATCH --mem=60000
 #SBATCH --partition=regular2
@@ -21,4 +21,4 @@ NPROCS=$((NNODES*32))
 cd $SLURM_SUBMIT_DIR 
 
 export OMP_NUM_THREADS=1
-mpirun -np ${NPROCS} ${PW_EXE} < vc-relax.in > vc-relax.output
+mpirun -np ${NPROCS} ${PW_EXE} < nscf.input > nscf.output

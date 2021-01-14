@@ -21,4 +21,4 @@ NPROCS=$((NNODES*32))
 cd $SLURM_SUBMIT_DIR 
 
 export OMP_NUM_THREADS=1
-mpirun -np ${NPROCS} ${PW_EXE} < vc-relax.in > vc-relax.output
+mpirun -np ${NPROCS} ${PW_EXE} < scf.input > scf.output
