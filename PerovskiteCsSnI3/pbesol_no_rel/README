@@ -3,4 +3,6 @@ made by Giacomo
 pseudo:
 Cs ------> Cs.pbesol-spn-rrkjus_psl.1.0.0.UPF 
 Sn ------> Sn.pbesol-dn-kjpaw_psl.1.0.0.UPF 
-I  ------>  I.pbesol-n-kjpaw_psl.1.0.0.UPF 
+I  ------>  I.pbesol-n-kjpaw_psl.1.0.0.UPF
+
+convergence ( 10^-3 Ry / atom ) achieved for ecut = 70 ecutrho = 420 and kgrid = 4 x 4 x 4 
