@@ -1,0 +1,43 @@
+&CONTROL
+    title = 'SnI4un', 
+    calculation = 'scf',
+    restart_mode = 'from_scratch',
+    verbosity = 'medium',
+    prefix = 'SnI4un',
+    wf_collect = .true.,
+    outdir = './out',
+    wfcdir = './out',
+    pseudo_dir = '../../../pseudo/',
+    tprnfor = .true.,
+    tstress = .true.,
+    max_seconds = 42500,
+    etot_conv_thr=1.d-7,
+/
+ &SYSTEM
+    ibrav = 0,
+    nat = 5, 
+    ntyp = 2,
+    ecutwfc= 70,
+    ecutrho=280,
+
+/
+ &ELECTRONS
+/
+ CELL_PARAMETERS {angstrom}
+   7.256584503   0.000000000   0.000000000
+   0.000000000   7.256584503   0.000000000
+   0.000000000   0.000000000   7.256584503
+
+ ATOMIC_SPECIES
+   Sn 118.7  Sn.pbe-dn-kjpaw_psl.1.0.0.UPF
+   I  126.9  I.pbe-n-kjpaw_psl.1.0.0.UPF
+
+ ATOMIC_POSITIONS {crystal}
+Sn 0.000000 0.000000 0.000000 
+I 0.233903 0.766097 0.766097 
+I 0.766097 0.233903 0.766097 
+I 0.766097 0.766097 0.233903 
+I 0.233903 0.233903 0.233903 
+
+K_POINTS {automatic}
+5 5 5 0 0 0

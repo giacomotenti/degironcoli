@@ -1,0 +1,32 @@
+#!/bin/bash
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=19
+#SBATCH --cpus-per-task=1
+#SBATCH --time=11:59:59
+#SBATCH --partition=regular2
+#SBATCH --job-name=CsIrsalt90.ecut
+#SBATCH --mail-user=drigo96@live.it
+#SBATCH --mail-type=ALL
+
+module purge
+module load gnu8
+module load mkl
+module load openmpi3
+
+cd ${SLURM_SUBMIT_DIR}
+echo $SLURM_SUBMIT_DIR
+
+# Define number of processors to send to mpirun for MPICH
+NNODES=1
+PW_EXE="/home/endrigo/q-e/bin/pw.x"
+
+
+
+
+NPROCS=$((NNODES*19))
+echo "$(date)"
+export OMP_NUM_THREADS=1
+mpirun -np ${NPROCS} ${PW_EXE} < vc-relax.in > vc-relax.out
+echo " Done."
+
+echo "$(date)"

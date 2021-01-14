@@ -1,0 +1,40 @@
+&CONTROL
+    title = 'CsIrsalt', 
+    calculation = 'scf',
+    restart_mode = 'from_scratch',
+    verbosity = 'medium',
+    prefix = 'CsIrs',
+    wf_collect = .true.,
+    outdir = './out',
+    wfcdir = './out',
+    pseudo_dir = '../../../pseudo/',
+    tprnfor = .true.,
+    tstress = .true.,
+    max_seconds = 42500,
+    etot_conv_thr=1.d-7,
+/
+ &SYSTEM
+    ibrav = 0,
+    nat = 2, 
+    ntyp = 2,
+    ecutwfc=60,
+    ecutrho=240,
+
+/
+ &ELECTRONS
+/
+ CELL_PARAMETERS {angstrom}
+   4.772736411   0.000000000   0.000000000
+   0.000000000   4.772736411   0.000000000
+   0.000000000   0.000000000   4.772736411
+ 
+ ATOMIC_SPECIES
+   Cs 132.9  Cs.pbe-spn-kjpaw_psl.1.0.0.UPF
+   I  126.9  I.pbe-n-kjpaw_psl.1.0.0.UPF
+
+ ATOMIC_POSITIONS {crystal}
+Cs 0.000000 0.000000 0.000000 
+I 0.500000 0.500000 0.500000 
+
+K_POINTS {automatic}
+3 3 3 0 0 0
