@@ -1,0 +1,5 @@
+&DOS
+   prefix = 'CsIhex'
+   fildos = 'dos.out'
+   DeltaE = 0.02
+/ 
