@@ -3,7 +3,7 @@
     calculation = 'scf',
     restart_mode = 'from_scratch',
     verbosity = 'medium',
-    prefix = 'CsIrs',
+    prefix = 'CsSnI3',
     wf_collect = .true.,
     outdir = './out',
     wfcdir = './out',
@@ -17,9 +17,9 @@
     ibrav = 0,
     nat = 2, 
     ntyp = 2,
-    ecutwfc=60,
-    ecutrho=240,
-    nbnd=9,
+    ecutwfc= 90,
+    ecutrho=360,
+    nbnd=9
 
 /
  &ELECTRONS
@@ -28,7 +28,6 @@
 4.665212 0.000000 0.000000
 0.000000 4.665212 0.000000
 0.000000 0.000000 4.665212
-
 
  ATOMIC_SPECIES
    Cs 132.9  Cs.pbe-spn-kjpaw_psl.1.0.0.UPF
@@ -39,4 +38,4 @@ Cs 0.000000 0.000000 0.000000
 I 0.500000 0.500000 0.500000 
 
 K_POINTS {automatic}
-6 6 6 0 0 0
+2 2 2 0 0 0

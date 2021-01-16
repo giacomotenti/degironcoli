@@ -1,16 +1,16 @@
-for i in 3 4 5 6 7 8 9 
+for i in 40 50 60 70 80 90 100
 do
-dldir="$i.kappa"
+dldir="$i.ecut"
 j=$((i*4))
 [ ! -d "$dldir" ] && mkdir -p "$dldir"
-cd $i.kappa
+cd $i.ecut
 cat >> scf.in <<EOF
 &CONTROL
     title = 'CsIrsalt', 
     calculation = 'scf',
     restart_mode = 'from_scratch',
     verbosity = 'medium',
-    prefix = 'CsIrs',
+    prefix = 'CsSnI3',
     wf_collect = .true.,
     outdir = './out',
     wfcdir = './out',
@@ -24,9 +24,9 @@ cat >> scf.in <<EOF
     ibrav = 0,
     nat = 2, 
     ntyp = 2,
-    ecutwfc=60,
-    ecutrho=240,
-    nbnd=9,
+    ecutwfc= $i,
+    ecutrho=$j,
+    nbnd=9
 
 /
  &ELECTRONS
@@ -35,7 +35,6 @@ cat >> scf.in <<EOF
 4.665212 0.000000 0.000000
 0.000000 4.665212 0.000000
 0.000000 0.000000 4.665212
-
 
  ATOMIC_SPECIES
    Cs 132.9  Cs.pbe-spn-kjpaw_psl.1.0.0.UPF
@@ -46,16 +45,16 @@ Cs 0.000000 0.000000 0.000000
 I 0.500000 0.500000 0.500000 
 
 K_POINTS {automatic}
-$i $i $i 0 0 0
+2 2 2 0 0 0
 EOF
 cat >>submit.job <<EOF
 #!/bin/bash
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=19
+#SBATCH --ntasks-per-node=32
 #SBATCH --cpus-per-task=1
 #SBATCH --time=11:59:59
 #SBATCH --partition=regular2
-#SBATCH --job-name=CsIrs$i.kappa
+#SBATCH --job-name=CsIrsalt$i.ecut
 #SBATCH --mail-user=drigo96@live.it
 #SBATCH --mail-type=ALL
 
@@ -74,7 +73,7 @@ PW_EXE="/home/endrigo/q-e/bin/pw.x"
 
 
 
-NPROCS=\$((NNODES*19))
+NPROCS=\$((NNODES*32))
 echo "\$(date)"
 export OMP_NUM_THREADS=1
 mpirun -np \${NPROCS} \${PW_EXE} < scf.in > scf.out
