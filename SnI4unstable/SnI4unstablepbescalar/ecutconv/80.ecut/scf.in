@@ -17,9 +17,9 @@
     ibrav = 0,
     nat = 5, 
     ntyp = 2,
-    ecutwfc= 70,
-    ecutrho=280,
-    nbnd=23
+    ecutwfc= 80,
+    ecutrho=320,
+    nbnd=23,
 
 /
  &ELECTRONS
@@ -28,7 +28,6 @@
 6.686428 0.000000 0.000000
 0.000000 6.686428 0.000000
 0.000000 0.000000 6.686428
-
 
  ATOMIC_SPECIES
    Sn 118.7  Sn.pbe-dn-kjpaw_psl.1.0.0.UPF
@@ -42,4 +41,4 @@ I 0.766097 0.766097 0.233903
 I 0.233903 0.233903 0.233903 
 
 K_POINTS {automatic}
-8 8 8 0 0 0
+2 2 2 0 0 0
