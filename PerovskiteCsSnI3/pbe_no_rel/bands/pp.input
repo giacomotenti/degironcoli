@@ -1,0 +1,12 @@
+&INPUTPP
+prefix='CsSnI3'
+filplot='1'
+outdir='out1/'
+plot_num=0
+/
+&PLOT
+nfile=1
+iflag=3
+output_format=7
+fileout='1.plot'
+/
