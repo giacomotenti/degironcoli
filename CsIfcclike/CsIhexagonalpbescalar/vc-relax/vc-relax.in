@@ -1,17 +1,17 @@
 &CONTROL
     title = 'CsIhexagonal', 
-    calculation = 'scf',
+    calculation = 'vc-relax',
     restart_mode = 'from_scratch',
     verbosity = 'medium',
     prefix = 'CsIhex',
     wf_collect = .true.,
     outdir = './out',
     wfcdir = './out',
-    pseudo_dir = '../../../pseudo/',
+    pseudo_dir = '../../pseudo/',
     tprnfor = .true.,
     tstress = .true.,
     max_seconds = 42500,
-    etot_conv_thr=1.d-7,
+    forc_conv_thr=1.d-4,
 /
  &SYSTEM
     ibrav = 0,
@@ -19,10 +19,20 @@
     ntyp = 2,
     ecutwfc= 60,
     ecutrho=240,
-    nbnd=33,
+    nbnd=33
 
 /
  &ELECTRONS
+    conv_thr = 1.0d-6,
+    diagonalization = 'david',
+    mixing_beta = 0.5,
+/
+ &IONS
+    ion_dynamics = 'bfgs',
+/
+
+ &CELL
+    cell_dynamics = 'bfgs',
 /
  CELL_PARAMETERS {angstrom}
 7.859178 0.000000 0.000000
@@ -44,4 +54,5 @@ I 0.000000 0.000000 0.500000
 I 0.000000 0.500000 0.000000 
 
 K_POINTS {automatic}
-6 6 6 0 0 0
+4 4 4 0 0 0
+

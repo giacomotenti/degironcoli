@@ -26,6 +26,7 @@ cat >> scf.in <<EOF
     ntyp = 2,
     ecutwfc= 60,
     ecutrho=240,
+    nbnd=33,
 
 /
  &ELECTRONS
@@ -55,7 +56,7 @@ EOF
 cat >>submit.job <<EOF
 #!/bin/bash
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=19
+#SBATCH --ntasks-per-node=32
 #SBATCH --cpus-per-task=1
 #SBATCH --time=11:59:59
 #SBATCH --partition=regular2
@@ -78,7 +79,7 @@ PW_EXE="/home/endrigo/q-e/bin/pw.x"
 
 
 
-NPROCS=\$((NNODES*19))
+NPROCS=\$((NNODES*32))
 echo "\$(date)"
 export OMP_NUM_THREADS=1
 mpirun -np \${NPROCS} \${PW_EXE} < scf.in > scf.out

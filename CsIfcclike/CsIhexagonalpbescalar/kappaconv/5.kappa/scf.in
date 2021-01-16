@@ -2,7 +2,7 @@
     title = 'CsIhexagonal', 
     calculation = 'scf',
     restart_mode = 'from_scratch',
-    verbosity = 'high',
+    verbosity = 'medium',
     prefix = 'CsIhex',
     wf_collect = .true.,
     outdir = './out',
