@@ -19,6 +19,7 @@
     ntyp = 2,
     ecutwfc= 60,
     ecutrho=240,
+    nbnd=33,
 
 /
  &ELECTRONS

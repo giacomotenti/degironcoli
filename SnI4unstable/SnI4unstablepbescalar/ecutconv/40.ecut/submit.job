@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH --nodes=1
-#SBATCH --ntasks-per-node=19
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=32
 #SBATCH --cpus-per-task=1
 ##SBATCH --mem=180000
 #SBATCH --time=11:59:59
@@ -17,16 +17,16 @@ cd ${SLURM_SUBMIT_DIR}
 echo $SLURM_SUBMIT_DIR
 
 # Define number of processors to send to mpirun for MPICH
-NNODES=1
+NNODES=2
 PW_EXE="/home/endrigo/q-e/bin/pw.x"
 
 
 
 
-NPROCS=$((NNODES*19))
+NPROCS=$((NNODES*32))
 echo "$(date)"
 export OMP_NUM_THREADS=1
-mpirun -np ${NPROCS} ${PW_EXE} < vc-relax.in > vc-relax.out
+mpirun -np ${NPROCS} ${PW_EXE} < scf.in > scf.out
 echo " Done."
 
 echo "$(date)"

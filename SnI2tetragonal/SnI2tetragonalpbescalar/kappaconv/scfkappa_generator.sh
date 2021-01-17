@@ -31,9 +31,10 @@ cat >> scf.in <<EOF
  &ELECTRONS
 /
  CELL_PARAMETERS {angstrom}
-   7.523156528   0.000000000   0.000000000
-   0.000000000   7.523156528   0.000000000
-   0.000000000   0.000000000   4.858329942
+7.630706 0.000000 0.000000
+0.000000 7.630706 0.000000
+0.000000 0.000000 4.695760
+
 
  ATOMIC_SPECIES
    Sn 118.7  Sn.pbe-dn-kjpaw_psl.1.0.0.UPF
@@ -53,7 +54,7 @@ EOF
 cat >>submit.job <<EOF
 #!/bin/bash
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=19
+#SBATCH --ntasks-per-node=32
 #SBATCH --cpus-per-task=1
 ##SBATCH --mem=180000
 #SBATCH --time=11:59:59
@@ -77,7 +78,7 @@ PW_EXE="/home/endrigo/q-e/bin/pw.x"
 
 
 
-NPROCS=\$((NNODES*19))
+NPROCS=\$((NNODES*32))
 echo "\$(date)"
 export OMP_NUM_THREADS=1
 mpirun -np \${NPROCS} \${PW_EXE} < scf.in > scf.out

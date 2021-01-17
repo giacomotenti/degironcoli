@@ -1,0 +1,7 @@
+&DOS
+   prefix = 'CsSnI3'
+   outdir='out1/'
+   fildos = 'dos.out'
+   Emin = -0.
+   DeltaE = 0.01
+/ 
