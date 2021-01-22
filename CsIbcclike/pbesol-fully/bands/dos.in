@@ -1,0 +1,5 @@
+&DOS
+   prefix = 'CsIsalt'
+   fildos = 'dos.out'
+   DeltaE = 0.02
+/ 
