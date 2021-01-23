@@ -18,8 +18,8 @@
     A = 4.665212, 
     nat = 2, 
     ntyp = 2,
-    ecutwfc= ECUT,
-    ecutrho= RHOCUT
+    ecutwfc= 60,
+    ecutrho= 360
     lspinorb=.true.
     noncolin = .true.
 /
@@ -38,4 +38,4 @@ Cs 0.000000 0.000000 0.000000
 I 0.500000 0.500000 0.500000 
 
 K_POINTS {automatic}
-8 8 8 1 1 1
+KAPPA KAPPA KAPPA 1 1 1

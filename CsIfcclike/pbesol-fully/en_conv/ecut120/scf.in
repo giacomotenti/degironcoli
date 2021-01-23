@@ -16,10 +16,10 @@
  &SYSTEM
     ibrav = 1,
     A = 4.665212, 
-    nat = 2, 
+    nat = 8, 
     ntyp = 2,
-    ecutwfc= ECUT,
-    ecutrho= RHOCUT
+    ecutwfc= 120,
+    ecutrho= 720.0
     lspinorb=.true.
     noncolin = .true.
 /
@@ -33,9 +33,16 @@ ATOMIC_SPECIES
    Cs 132.9  Cs.rel-pbesol-spn-kjpaw_psl.1.0.0.UPF  
    I  126.9  I.rel-pbesol-n-kjpaw_psl.1.0.0.UPF
 
+
 ATOMIC_POSITIONS {crystal}
 Cs 0.000000 0.000000 0.000000 
+Cs 0.000000 0.500000 0.500000 
+Cs 0.500000 0.000000 0.500000 
+Cs 0.500000 0.500000 0.000000 
+I 0.500000 0.000000 0.000000 
 I 0.500000 0.500000 0.500000 
+I 0.000000 0.000000 0.500000 
+I 0.000000 0.500000 0.000000 
 
 K_POINTS {automatic}
-8 8 8 1 1 1
+4 4 4 1 1 1

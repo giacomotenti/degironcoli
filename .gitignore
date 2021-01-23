@@ -2,4 +2,5 @@
 *.wfc*
 *slurm-*
 *tmp.in*
+*.mix*
 out/

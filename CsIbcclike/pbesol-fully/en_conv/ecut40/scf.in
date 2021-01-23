@@ -18,8 +18,8 @@
     A = 4.665212, 
     nat = 2, 
     ntyp = 2,
-    ecutwfc= ECUT,
-    ecutrho= RHOCUT
+    ecutwfc= 40,
+    ecutrho= 240.0
     lspinorb=.true.
     noncolin = .true.
 /
