@@ -5,7 +5,7 @@
 #SBATCH --time=06:00:00
 #SBATCH --account=Sis20_baroni
 #SBATCH --partition=skl_usr_prod
-#SBATCH --job-name=CsI
+#SBATCH --job-name=perovskite
 #SBATCH --mail-user=cmalosso@sissa.it
 #SBATCH --mail-type=ALL
 

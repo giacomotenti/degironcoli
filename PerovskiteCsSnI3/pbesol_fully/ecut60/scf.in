@@ -28,6 +28,7 @@
     conv_thr = 1.0d-6,
     diagonalization = 'david',
     mixing_beta = 0.35,
+    mixing_mode = local-TF,
 /
 
 ATOMIC_SPECIES
