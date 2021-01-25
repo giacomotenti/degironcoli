@@ -1,0 +1,5 @@
+&DOS
+   prefix = 'CsIfcc'
+   fildos = 'dos.out'
+   DeltaE = 0.02
+/ 

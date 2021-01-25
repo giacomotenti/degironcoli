@@ -1,0 +1,5 @@
+&DOS
+   prefix = 'CsSnI3'
+   fildos = 'dos.out'
+   DeltaE = 0.1
+/ 

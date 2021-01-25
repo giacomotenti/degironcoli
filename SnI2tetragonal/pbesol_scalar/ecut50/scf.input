@@ -1,0 +1,46 @@
+&CONTROL
+    title = 'SnI2', 
+    calculation = 'scf',
+    restart_mode = 'from_scratch',
+    verbosity = 'medium',
+    prefix = 'SnI2',
+    wf_collect = .true.,
+    outdir = './',
+    wfcdir = './',
+    pseudo_dir = '/scratch/gtenti/degironcoli/pseudo',
+    tprnfor = .true.,
+    tstress = .true.,
+    max_seconds = 42500,
+    forc_conv_thr=1.d-4,
+/
+ &SYSTEM
+    ibrav = 8,
+    A = 7.630706 
+    B = 7.630706
+    C = 4.695760
+    nat = 6, 
+    ntyp = 2,
+    ecutwfc= 50,
+    ecutrho= 200.0
+/
+ &ELECTRONS
+    conv_thr = 1.0d-6,
+    diagonalization = 'david',
+    mixing_beta = 0.5,
+/
+
+ATOMIC_SPECIES
+   Sn 118.7  Sn.pbesol-dn-kjpaw_psl.1.0.0.UPF
+   I  126.9  I.pbesol-n-kjpaw_psl.1.0.0.UPF
+
+ATOMIC_POSITIONS {crystal}
+Sn 0.000000 0.000000 0.000000
+Sn 0.500000 0.500000 0.500000
+I  0.298521 0.298521 0.000000
+I  0.701479 0.701479 0.000000
+I  0.798521 0.201479 0.500000
+I  0.201479 0.798521 0.500000
+
+
+K_POINTS {automatic}
+2 2 2 0 0 0

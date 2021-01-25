@@ -1,0 +1,40 @@
+&CONTROL
+    title = 'CsIbcc', 
+    calculation = 'nscf',
+    restart_mode = 'from_scratch',
+    verbosity = 'high',
+    prefix = 'CsIbcc',
+    wf_collect = .true.,
+    outdir = './',
+    wfcdir = './',
+    pseudo_dir = '/scratch/gtenti/degironcoli/pseudo',
+    tprnfor = .true.,
+    tstress = .true.,
+    max_seconds = 42500,
+    forc_conv_thr=1.d-4,
+/
+ &SYSTEM
+    ibrav = 1,
+    A = 4.665212, 
+    nat = 2, 
+    ntyp = 2,
+    ecutwfc= 70,
+    ecutrho= 280.0
+    occupations='tetrahedra'
+/
+ &ELECTRONS
+    conv_thr = 1.0d-6,
+    diagonalization = 'david',
+    mixing_beta = 0.7,
+/
+
+ATOMIC_SPECIES
+   Cs 132.9  Cs.pbesol-spn-rrkjus_psl.1.0.0.UPF
+   I  126.9  I.pbesol-n-kjpaw_psl.1.0.0.UPF
+
+ATOMIC_POSITIONS {crystal}
+Cs 0.000000 0.000000 0.000000 
+I 0.500000 0.500000 0.500000 
+
+K_POINTS {automatic}
+12 12 12 1 1 1
