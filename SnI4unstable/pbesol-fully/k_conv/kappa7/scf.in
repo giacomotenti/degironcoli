@@ -1,0 +1,44 @@
+&CONTROL
+    title = 'CsIsalt', 
+    calculation = 'scf',
+    restart_mode = 'from_scratch',
+    verbosity = 'high',
+    prefix = 'CsIsalt',
+    wf_collect = .true.,
+    outdir = './',
+    wfcdir = './',
+    pseudo_dir = '/marconi_scratch/userexternal/cmalosso/degironcoli/pseudo',
+    tprnfor = .true.,
+    tstress = .true.,
+    max_seconds = 42500,
+    forc_conv_thr=1.d-4,
+/
+ &SYSTEM
+    ibrav = 1,
+    A = 6.686428 
+    nat = 5, 
+    ntyp = 2,
+    ecutwfc= 70,
+    ecutrho= 420
+    lspinorb=.true.
+    noncolin = .true.
+/
+ &ELECTRONS
+    conv_thr = 1.0d-6,
+    diagonalization = 'david',
+    mixing_beta = 0.35,
+/
+
+ATOMIC_SPECIES
+   Sn 118.7  Sn.rel-pbesol-dn-kjpaw_psl.1.0.0.UPF  
+   I  126.9  I.rel-pbesol-n-kjpaw_psl.1.0.0.UPF
+
+ATOMIC_POSITIONS {crystal}
+Sn 0.000000 0.000000 0.000000 
+I 0.233903 0.766097 0.766097 
+I 0.766097 0.233903 0.766097 
+I 0.766097 0.766097 0.233903 
+I 0.233903 0.233903 0.233903 
+
+K_POINTS {automatic}
+7 7 7 1 1 1
