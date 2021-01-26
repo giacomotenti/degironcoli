@@ -1,0 +1,16 @@
+#!/bin/sh
+
+for k in $(seq 2 8)  
+do
+
+mkdir kappa$k
+cp submit.job kappa$k/ 
+cd kappa$k
+
+sed "s/KAPPA/${k}/g" ../scf_k.READ > scf.in
+
+sbatch submit.job 
+
+cd .. 
+
+done
