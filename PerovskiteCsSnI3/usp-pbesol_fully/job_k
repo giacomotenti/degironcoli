@@ -1,6 +1,6 @@
 #!/bin/sh
 
-for k in $(seq 2 8)  
+for k in 3  
 do
 
 mkdir kappa$k
