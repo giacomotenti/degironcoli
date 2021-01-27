@@ -1,0 +1,59 @@
+&CONTROL
+    title = 'CsIhexagonal', 
+    calculation = 'vc-relax',
+    restart_mode = 'from_scratch',
+    ndr = 61,
+    ndw = 62,
+    verbosity = 'medium',
+    prefix = 'CsSnI3',
+    wf_collect = .true.,
+    outdir = './out',
+    wfcdir = './out',
+    pseudo_dir = '../../../pseudo/',
+    tprnfor = .true.,
+    tstress = .true.,
+    max_seconds = 42500,
+    forc_conv_thr=1.d-4,
+/
+ &SYSTEM
+    ibrav = 0,
+    nat = 8, 
+    ntyp = 2,
+    noncolin=.true.,
+    lspinorb=.true.,
+    ecutwfc= 80,
+    ecutrho=320,
+
+/
+ &ELECTRONS
+    conv_thr = 1.0d-6,
+    diagonalization = 'cg',
+    mixing_beta = 0.5,
+/
+ &IONS
+    ion_dynamics = 'bfgs',
+/
+
+ &CELL
+    cell_dynamics = 'bfgs',
+/
+ CELL_PARAMETERS {angstrom}
+7.859178 0.000000 0.000000
+0.000000 7.859178 0.000000
+0.000000 0.000000 7.859178
+
+ ATOMIC_SPECIES
+   I  126.9  I.rel-pbe-n-kjpaw_psl.1.0.0.UPF
+   Cs 132.9  Cs.rel-pbe-spn-kjpaw_psl.1.0.0.UPF
+ ATOMIC_POSITIONS {alat}
+Cs 0.000000 0.000000 0.000000 
+Cs 0.000000 0.500000 0.500000 
+Cs 0.500000 0.000000 0.500000 
+Cs 0.500000 0.500000 0.000000 
+I 0.500000 0.000000 0.000000 
+I 0.500000 0.500000 0.500000 
+I 0.000000 0.000000 0.500000 
+I 0.000000 0.500000 0.000000 
+
+K_POINTS {automatic}
+2 2 2 0 0 0

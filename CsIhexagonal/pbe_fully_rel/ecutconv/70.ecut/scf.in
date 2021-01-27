@@ -1,0 +1,53 @@
+&CONTROL
+    title = 'CsIhexagonal', 
+    calculation = 'scf',
+    restart_mode = 'from_scratch',
+    verbosity = 'medium',
+    prefix = 'CsIhex',
+    wf_collect = .true.,
+    outdir = './out',
+    wfcdir = './out',
+    pseudo_dir = '../../../pseudo/',
+    max_seconds = 42500,
+/
+ &SYSTEM
+    ibrav = 0,
+    nat = 8, 
+    ntyp = 2,
+    noncolin=.true.,
+    lspinorb=.true.,
+    ecutwfc= 70,
+    ecutrho=280,
+    nbnd=65,
+
+/
+ &ELECTRONS
+    conv_thr = 1.0d-6,
+    diagonalization = 'david',
+    mixing_beta = 0.6,
+/
+ &IONS
+/
+
+ &CELL
+/
+ CELL_PARAMETERS {angstrom}
+7.859178 0.000000 0.000000
+0.000000 7.859178 0.000000
+0.000000 0.000000 7.859178
+
+ ATOMIC_SPECIES
+   I  126.9  I.rel-pbe-n-kjpaw_psl.1.0.0.UPF
+   Cs 132.9  Cs.rel-pbe-spn-kjpaw_psl.1.0.0.UPF
+ ATOMIC_POSITIONS {crystal}
+Cs 0.000000 0.000000 0.000000 
+Cs 0.000000 0.500000 0.500000 
+Cs 0.500000 0.000000 0.500000 
+Cs 0.500000 0.500000 0.000000 
+I 0.500000 0.000000 0.000000 
+I 0.500000 0.500000 0.500000 
+I 0.000000 0.000000 0.500000 
+I 0.000000 0.500000 0.000000 
+
+K_POINTS {automatic}
+2 2 2 0 0 0
