@@ -1,0 +1,50 @@
+
+     Program DOS v.6.6 starts on 27Jan2021 at 15: 2:35 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on    32 processors
+
+     MPI processes distributed on     1 nodes
+     R & G space division:  proc/nbgrp/npool/nimage =      32
+     Fft bands division:     nmany     =       1
+
+     Reading xml data from directory:
+
+     out/CsI3.save/
+     file Cs.rel-pbe-spn-rrkjus_psl.1.0.0.UPF: wavefunction(s)  5S 6S renormalized
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+ 
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min         110     110     30                 4884     4884     714
+     Max         111     111     31                 4888     4888     717
+     Sum        3521    3521    973               156363   156363   22887
+ 
+
+     Check: negative core charge=   -0.000002
+
+     Gaussian broadening (default values): ngauss,degauss=   0    0.007350
+
+ 
+     DOS          :     10.62s CPU     31.25s WALL
+
+ 
+   This run was terminated on:  15: 3: 7  27Jan2021            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=

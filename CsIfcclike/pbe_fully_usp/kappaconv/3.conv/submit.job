@@ -1,0 +1,49 @@
+#!/bin/bash
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=32
+#SBATCH --cpus-per-task=1
+#SBATCH --time=00:59:59
+#SBATCH --partition=regular2
+#SBATCH --account=afiorent
+##SBATCH --mem=60000
+#SBATCH --exclude=cn09-[15-16]
+#SBATCH --job-name=perov3.conv
+#SBATCH --mail-user=afiorent@sissa.it
+##SBATCH --mail-type=ALL
+
+
+module purge
+module load intel/19.0.4.243 openmpi3/3.1.4 boost/1.71.0  scalapack/2.0.2
+
+NNODES=1
+PW_EXE="/home/gtenti/qe-6.6/bin/pw.x"
+#PW_EXE=/pw.x
+NPROCS=$((NNODES*32))
+
+cd ${SLURM_SUBMIT_DIR} 
+echo $SLURM_SUBMIT_DIR
+
+export OMP_NUM_THREADS=1
+mpirun -np ${NPROCS} ${PW_EXE} < scf.in > scf.out
+#module purge
+#module load gnu8
+#module load mkl
+#module load openmpi3
+#
+#cd ${SLURM_SUBMIT_DIR}
+#echo $SLURM_SUBMIT_DIR
+#
+## Define number of processors to send to mpirun for MPICH
+#NNODES=2
+#
+#PW_EXE="/home/afiorent/qe-6.5/bin/pw.x"
+#
+#
+#
+#NPROCS=$((NNODES*32))
+#echo "$(date)"
+#export OMP_NUM_THREADS=1
+#mpirun -np ${NPROCS} ${PW_EXE} < scf.in > scf.out
+echo " Done."
+
+echo "$(date)"

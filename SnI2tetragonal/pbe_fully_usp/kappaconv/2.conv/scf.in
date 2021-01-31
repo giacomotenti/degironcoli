@@ -1,0 +1,47 @@
+&CONTROL
+    title = 'CsIsalt', 
+    calculation = 'scf',
+    restart_mode = 'from_scratch',
+    verbosity = 'medium',
+    prefix = 'CsIsalt',
+    wf_collect = .true.,
+    outdir = './out',
+    wfcdir = './out',
+    pseudo_dir = '/scratch/afiorent/degironcoli/pseudo/pseudo-usp',
+    tprnfor = .true.,
+    tstress = .true.,
+    forc_conv_thr=1.d-4,
+    max_seconds = 42500,
+/
+
+
+ &SYSTEM
+    ibrav = 6,
+    A = 7.630706,
+    C=4.695760, 
+    nat = 6, 
+    ntyp = 2,
+    ecutwfc= 80,
+    ecutrho= 320,
+    noncolin=.true.,
+    lspinorb=.true.,
+/
+ &ELECTRONS
+    conv_thr = 1.0d-6,
+    diagonalization = 'david',
+    mixing_beta = 0.6,
+/
+
+ATOMIC_SPECIES
+   Sn 118.7  Sn.rel-pbe-dn-rrkjus_psl.1.0.0.UPF
+   I  126.9  I.rel-pbe-n-rrkjus_psl.0.2.2.UPF 
+ATOMIC_POSITIONS {crystal}
+Sn 0.000000 0.000000 0.000000 
+Sn 0.500000 0.500000 0.500000 
+I 0.298521 0.298521 0.000000 
+I 0.701479 0.701479 0.000000 
+I 0.798521 0.201479 0.500000 
+I 0.201479 0.798521 0.500000 
+K_POINTS {automatic}
+2 2 2  1 1 1
+
