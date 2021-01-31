@@ -33,7 +33,6 @@ ATOMIC_SPECIES
    Cs 132.9  Cs.rel-pbesol-spn-kjpaw_psl.1.0.0.UPF  
    I  126.9  I.rel-pbesol-n-kjpaw_psl.1.0.0.UPF
 
-
 ATOMIC_POSITIONS {crystal}
 Cs 0.000000 0.000000 0.000000 
 Cs 0.000000 0.500000 0.500000 

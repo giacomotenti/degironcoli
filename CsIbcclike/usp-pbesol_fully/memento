@@ -1,0 +1,4 @@
+convergency:
+ecut = 40 
+cutrho = 200
+5 5 5

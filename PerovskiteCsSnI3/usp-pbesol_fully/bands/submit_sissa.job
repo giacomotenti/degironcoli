@@ -1,0 +1,31 @@
+#!/bin/bash
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=24
+#SBATCH --cpus-per-task=2
+#SBATCH --time=06:00:00
+#SBATCH --account=cmalosso
+#SBATCH --partition=regular2
+#SBATCH --job-name=Perovskite
+
+source /home/cmalosso/moduli/moduli-qe.sh
+umask -S u=rwx,g=r,o=r
+
+cd ${SLURM_SUBMIT_DIR}
+echo $SLURM_SUBMIT_DIR
+
+# Define number of processors to send to mpirun for MPICH
+NNODES=2
+PW_EXE="/home/cmalosso/qe-6.7/bin/pw.x"
+DOS_EXE="/home/cmalosso/qe-6.7/bin/dos.x"
+
+
+
+NPROCS=$((NNODES*24))
+echo "$(date)"
+export OMP_NUM_THREADS=2
+#mpirun -np ${NPROCS} ${PW_EXE} < scf.in > scf.out
+#mpirun -np ${NPROCS} ${PW_EXE} < nscf.in > nscf.out
+mpirun -np ${NPROCS} ${DOS_EXE} < dos.in > dos.out
+echo " Done."
+
+echo "$(date)"

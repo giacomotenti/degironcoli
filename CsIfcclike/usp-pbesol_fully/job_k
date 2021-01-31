@@ -1,0 +1,16 @@
+#!/bin/sh
+
+for k in 1 2 3 4 5 6 7 8  
+do
+
+mkdir kkappa$k
+cp submit_sissa.job kkappa$k/ 
+cd kkappa$k
+
+sed "s/KAPPA/${k}/g" ../scf_k.READ > scf.in
+
+sbatch submit_sissa.job 
+
+cd .. 
+
+done

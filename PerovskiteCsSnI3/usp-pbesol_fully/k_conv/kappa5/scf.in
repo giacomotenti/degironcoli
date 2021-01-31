@@ -7,7 +7,7 @@
     wf_collect = .true.,
     outdir = './',
     wfcdir = './',
-    pseudo_dir = '/marconi_scratch/userexternal/cmalosso/degironcoli/pseudo/pseudo-usp',
+    pseudo_dir = '/scratch/cmalosso/degironcoli/pseudo/pseudo-usp',
     tprnfor = .true.,
     tstress = .true.,
     forc_conv_thr=1.d-4,

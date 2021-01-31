@@ -1,0 +1,7 @@
+&DOS
+   outdir='.',
+   prefix = 'CsIbcc',
+   fildos = 'fildos'
+   Emin = -15
+   DeltaE = 0.1
+/ 

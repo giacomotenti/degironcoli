@@ -1,0 +1,45 @@
+&CONTROL
+    title = 'CsIfcc', 
+    calculation = 'scf',
+    restart_mode = 'from_scratch',
+    verbosity = 'medium',
+    prefix = 'CsIfcc',
+    wf_collect = .true.,
+    outdir = './',
+    wfcdir = './',
+    pseudo_dir = '/scratch/cmalosso/degironcoli/pseudo/pseudo-usp',
+    tprnfor = .true.,
+    tstress = .true.,
+/
+ &SYSTEM
+    ibrav = 1,
+    A = 4.665212, 
+    nat = 8, 
+    ntyp = 2,
+    ecutwfc= 20,
+    ecutrho= 100.0
+    noncolin=.true.,
+    lspinorb=.true.,
+/
+ &ELECTRONS
+    conv_thr = 1.0d-6,
+    diagonalization = 'david',
+    mixing_beta = 0.35,
+/
+
+ATOMIC_SPECIES
+   Cs 132.9  Cs.rel-pbesol-spn-rrkjus_psl.1.0.0.UPF
+   I  126.9  I.rel-pbesol-n-rrkjus_psl.1.0.0.UPF 
+
+ATOMIC_POSITIONS {crystal}
+Cs 0.000000 0.000000 0.000000 
+Cs 0.000000 0.500000 0.500000 
+Cs 0.500000 0.000000 0.500000 
+Cs 0.500000 0.500000 0.000000 
+I 0.500000 0.000000 0.000000 
+I 0.500000 0.500000 0.500000 
+I 0.000000 0.000000 0.500000 
+I 0.000000 0.500000 0.000000 
+
+K_POINTS {automatic}
+4 4 4 1 1 1

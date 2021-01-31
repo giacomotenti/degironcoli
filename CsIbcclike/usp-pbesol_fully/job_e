@@ -1,0 +1,18 @@
+#!/bin/sh
+
+for k in 20 30 
+do
+
+mkdir ecut$k
+cp submit_sissa.job ecut$k/ 
+cd ecut$k
+kr=$(echo "$k * 5.0" | bc -l )
+
+sed "s/ECUT/${k}/g" ../scf.READ > tempqe
+sed "s/RHOCUT/${kr}/g" tempqe > scf.in
+rm tempqe
+sbatch submit_sissa.job 
+
+cd .. 
+
+done
