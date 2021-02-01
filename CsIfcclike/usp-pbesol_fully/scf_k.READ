@@ -13,11 +13,11 @@
 /
  &SYSTEM
     ibrav = 1,
-    A = 4.665212, 
+    A = 7.859178, 
     nat = 8, 
     ntyp = 2,
-    ecutwfc = 80 ,
-    ecutrho = 400,
+    ecutwfc = 70 ,
+    ecutrho = 350,
     noncolin=.true.,
     lspinorb=.true.,
 /

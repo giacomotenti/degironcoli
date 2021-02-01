@@ -1,9 +1,9 @@
 &CONTROL
-    title = 'CsIbcc', 
+    title = 'CsIfcc', 
     calculation = 'scf',
     restart_mode = 'from_scratch',
     verbosity = 'medium',
-    prefix = 'CsIbcc',
+    prefix = 'CsIfcc',
     wf_collect = .true.,
     outdir = './',
     wfcdir = './',
@@ -16,8 +16,8 @@
     A = 7.859178, 
     nat = 8, 
     ntyp = 2,
-    ecutwfc = 70 ,
-    ecutrho = 350,
+    ecutwfc= 80,
+    ecutrho= 400.0
     noncolin=.true.,
     lspinorb=.true.,
 /
@@ -42,4 +42,4 @@ I 0.000000 0.000000 0.500000
 I 0.000000 0.500000 0.000000 
 
 K_POINTS {automatic}
-6 6 6 1 1 1
+4 4 4 1 1 1
