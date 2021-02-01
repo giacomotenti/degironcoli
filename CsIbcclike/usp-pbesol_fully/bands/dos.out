@@ -1,5 +1,5 @@
 
-     Program DOS v.6.7MaX starts on 31Jan2021 at 15:18:17 
+     Program DOS v.6.7MaX starts on 31Jan2021 at 16: 9:42 
 
      This program is part of the open-source Quantum ESPRESSO suite
      for quantum simulation of materials; please cite
@@ -19,12 +19,32 @@
      Reading xml data from directory:
 
      ./CsIbcc.save/
-     Message from routine qexsd_readschema :
-     xml data file ./CsIbcc.save/data-file-schema.xml not found
+     file Cs.rel-pbesol-spn-rrkjus_psl.1.0.0.UPF: wavefunction(s)  5S 6S renormalized
+     file I.rel-pbesol-n-rrkjus_psl.1.0.0.UPF: wavefunction(s)  5S renormalized
 
- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-     Error in routine read_xml_file (1):
-     fatal error reading xml file
- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation= PBESOL
+                           (   1   4  10   8   0   0   0)
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
 
-     stopping ...
+
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min          25      20      6                  679      486      80
+     Max          26      21      7                  684      493      85
+     Sum        1229     989    293                32675    23439    3887
+
+
+     Gaussian broadening (default values): ngauss,degauss=   0    0.007350
+
+
+     DOS          :      3.54s CPU      5.61s WALL
+
+
+   This run was terminated on:  16: 9:48  31Jan2021            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=

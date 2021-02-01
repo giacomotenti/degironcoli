@@ -1,0 +1,295 @@
+
+     Program PWSCF v.6.0 (svn rev. 13079) starts on 31Jan2021 at 16:10:27 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI & OpenMP), running on      96 processor cores
+     Number of MPI processes:                48
+     Threads/MPI process:                     2
+     R & G space division:  proc/nbgrp/npool/nimage =      48
+     Waiting for input...
+     Reading input from standard input
+
+     Current dimensions of program PWSCF are:
+     Max number of different atomic species (ntypx) = 10
+     Max number of k-points (npk) =  40000
+     Max angular momentum in pseudopotentials (lmaxx) =  3
+               file Cs.rel-pbesol-spn-rrkjus_psl.1.0.0.UPF: wavefunction(s)  5S 6S renormalized
+               file Sn.rel-pbesol-dn-rrkjus_psl.1.0.0.UPF: wavefunction(s)  5S 4D 4D renormalized
+               file I.rel-pbesol-n-rrkjus_psl.1.0.0.UPF: wavefunction(s)  5S renormalized
+
+     Subspace diagonalization in iterative solution of the eigenvalue problem:
+     a serial algorithm will be used
+
+
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min         275     220     56                34235    24494    3188
+     Max         276     221     58                34240    24497    3193
+     Sum       13223   10579   2721              1643381  1175773  153113
+
+
+     Title: 
+     CsSnI3                                                                     
+
+
+     bravais-lattice index     =            8
+     lattice parameter (alat)  =      16.5033  a.u.
+     unit-cell volume          =    6621.2472 (a.u.)^3
+     number of atoms/cell      =           20
+     number of atomic types    =            3
+     number of electrons       =       176.00
+     number of Kohn-Sham states=          176
+     kinetic-energy cutoff     =     120.0000  Ry
+     charge density cutoff     =     600.0000  Ry
+     convergence threshold     =      1.0E-06
+     mixing beta               =       0.3500
+     number of iterations used =            8  plain     mixing
+     Exchange-correlation      = PBESOL ( 1  4 10  8 0 0)
+     Non magnetic calculation with spin-orbit
+
+
+     celldm(1)=  16.503301  celldm(2)=   1.015921  celldm(3)=   1.449998
+     celldm(4)=   0.000000  celldm(5)=   0.000000  celldm(6)=   0.000000
+
+     crystal axes: (cart. coord. in units of alat)
+               a(1) = (   1.000000   0.000000   0.000000 )  
+               a(2) = (   0.000000   1.015921   0.000000 )  
+               a(3) = (   0.000000   0.000000   1.449998 )  
+
+     reciprocal axes: (cart. coord. in units 2 pi/alat)
+               b(1) = (  1.000000  0.000000  0.000000 )  
+               b(2) = (  0.000000  0.984329  0.000000 )  
+               b(3) = (  0.000000  0.000000  0.689656 )  
+
+
+     PseudoPot. # 1 for Cs read from file:
+     /scratch/cmalosso/degironcoli/pseudo/pseudo-usp/Cs.rel-pbesol-spn-rrkjus_psl.1.0.0.UPF
+     MD5 check sum: 846889b67fb1b19751b5b37931589d70
+     Pseudo is Ultrasoft + core correction, Zval =  9.0
+     Generated using "atomic" code by A. Dal Corso  v.6.4.1
+     Using radial grid of 1251 points, 15 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   0
+                l(4) =   1
+                l(5) =   1
+                l(6) =   1
+                l(7) =   1
+                l(8) =   2
+                l(9) =   2
+               l(10) =   2
+               l(11) =   2
+               l(12) =   3
+               l(13) =   3
+               l(14) =   3
+               l(15) =   3
+     Q(r) pseudized with 0 coefficients 
+
+
+     PseudoPot. # 2 for Sn read from file:
+     /scratch/cmalosso/degironcoli/pseudo/pseudo-usp/Sn.rel-pbesol-dn-rrkjus_psl.1.0.0.UPF
+     MD5 check sum: c1cf6ea56b96a3656bdf0d1db379e093
+     Pseudo is Ultrasoft + core correction, Zval = 14.0
+     Generated using "atomic" code by A. Dal Corso  v.6.3
+     Using radial grid of 1243 points, 10 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+                l(5) =   1
+                l(6) =   1
+                l(7) =   2
+                l(8) =   2
+                l(9) =   2
+               l(10) =   2
+     Q(r) pseudized with 0 coefficients 
+
+
+     PseudoPot. # 3 for  I read from file:
+     /scratch/cmalosso/degironcoli/pseudo/pseudo-usp/I.rel-pbesol-n-rrkjus_psl.1.0.0.UPF
+     MD5 check sum: 0f96c6bfb1b448f280658f96eb466b08
+     Pseudo is Ultrasoft + core correction, Zval =  7.0
+     Generated using "atomic" code by A. Dal Corso  v.6.3
+     Using radial grid of 1247 points, 10 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+                l(5) =   1
+                l(6) =   1
+                l(7) =   2
+                l(8) =   2
+                l(9) =   2
+               l(10) =   2
+     Q(r) pseudized with 0 coefficients 
+
+
+     atomic species   valence    mass     pseudopotential
+        Cs             9.00   132.90000     Cs( 1.00)
+        Sn            14.00   118.70000     Sn( 1.00)
+        I              7.00   126.90000      I( 1.00)
+
+      4 Sym. Ops., with inversion, found ( 2 have fractional translation)
+          (note:  4 additional sym.ops. were found but ignored
+           their fractional translations are incommensurate with FFT grid)
+
+                                    s                        frac. trans.
+
+      isym =  1     identity                                     
+
+ cryst.   s( 1) = (     1          0          0      )
+                  (     0          1          0      )
+                  (     0          0          1      )
+
+ cart.    s( 1) = (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+
+
+      isym =  2     180 deg rotation - cart. axis [0,0,1]        
+
+ cryst.   s( 2) = (    -1          0          0      )    f =(  0.0000000 )
+                  (     0         -1          0      )       (  0.0000000 )
+                  (     0          0          1      )       ( -0.5000000 )
+
+ cart.    s( 2) = ( -1.0000000  0.0000000  0.0000000 )    f =(  0.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )       (  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )       ( -0.7249991 )
+
+
+      isym =  3     inversion                                    
+
+ cryst.   s( 3) = (    -1          0          0      )
+                  (     0         -1          0      )
+                  (     0          0         -1      )
+
+ cart.    s( 3) = ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+
+
+      isym =  4     inv. 180 deg rotation - cart. axis [0,0,1]   
+
+ cryst.   s( 4) = (     1          0          0      )    f =(  0.0000000 )
+                  (     0          1          0      )       (  0.0000000 )
+                  (     0          0         -1      )       ( -0.5000000 )
+
+ cart.    s( 4) = (  1.0000000  0.0000000  0.0000000 )    f =(  0.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )       (  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )       ( -0.7249991 )
+
+
+     double point group C_2h (2/m) 
+     there are  8 classes and  4 irreducible representations
+     the character table:
+
+       E     -E    C2    -C2   i     -i    s_h   -s_h 
+                                                      
+G_3+   1.00 -1.00  0.00  0.00  1.00 -1.00  0.00  0.00
+G_4+   1.00 -1.00  0.00  0.00  1.00 -1.00  0.00  0.00
+G_3-   1.00 -1.00  0.00  0.00 -1.00  1.00  0.00  0.00
+G_4-   1.00 -1.00  0.00  0.00 -1.00  1.00  0.00  0.00
+
+     imaginary part
+
+       E     -E    C2    -C2   i     -i    s_h   -s_h 
+                                                      
+G_3+   0.00  0.00  1.00 -1.00  0.00  0.00  1.00 -1.00
+G_4+   0.00  0.00 -1.00  1.00  0.00  0.00 -1.00  1.00
+G_3-   0.00  0.00  1.00 -1.00  0.00  0.00 -1.00  1.00
+G_4-   0.00  0.00 -1.00  1.00  0.00  0.00  1.00 -1.00
+
+     the symmetry operations in each class and the name of the first element:
+
+     E             1
+          identity                                               
+     -E           -1
+          identity E                                             
+     C2            2
+          180 deg rotation - cart. axis [0,0,1]                  
+     -C2          -2
+          180 deg rotation - cart. axis [0,0,1] E                
+     i             3
+          inversion                                              
+     -i           -3
+          inversion E                                            
+     s_h           4
+          inv. 180 deg rotation - cart. axis [0,0,1]             
+     -s_h         -4
+          inv. 180 deg rotation - cart. axis [0,0,1] E           
+
+   Cartesian axes
+
+     site n.     atom                  positions (alat units)
+         1           Cs  tau(   1) = (   0.0046830   0.0237045   1.0874986  )
+         2           Cs  tau(   2) = (   0.5046830   0.4842559   1.0874986  )
+         3           Cs  tau(   3) = (   0.9953170   0.9922163   0.3624995  )
+         4           Cs  tau(   4) = (   0.4953170   0.5316649   0.3624995  )
+         5           Sn  tau(   5) = (   0.5000000   0.0000000   0.0000000  )
+         6           Sn  tau(   6) = (   0.0000000   0.5079604   0.7249991  )
+         7           Sn  tau(   7) = (   0.0000000   0.5079604   0.0000000  )
+         8           Sn  tau(   8) = (   0.5000000   0.0000000   0.7249991  )
+         9           I   tau(   9) = (   0.7030980   0.7148750   1.4390304  )
+        10           I   tau(  10) = (   0.2969020   0.3010458   0.7140313  )
+        11           I   tau(  11) = (   0.7030980   0.7148750   0.7359669  )
+        12           I   tau(  12) = (   0.2969020   0.3010458   0.0109678  )
+        13           I   tau(  13) = (   0.5026480   0.9956207   0.3624995  )
+        14           I   tau(  14) = (   0.2030980   0.8090062   0.7359669  )
+        15           I   tau(  15) = (   0.9973520   0.4876603   1.0874986  )
+        16           I   tau(  16) = (   0.7969020   0.2069146   0.7140313  )
+        17           I   tau(  17) = (   0.7969020   0.2069146   0.0109678  )
+        18           I   tau(  18) = (   0.4973520   0.0203001   1.0874986  )
+        19           I   tau(  19) = (   0.0026480   0.5282605   0.3624995  )
+        20           I   tau(  20) = (   0.2030980   0.8090062   1.4390304  )
+
+   Crystallographic axes
+
+     site n.     atom                  positions (cryst. coord.)
+         1           Cs  tau(   1) = (  0.0046830  0.0233330  0.7500000  )
+         2           Cs  tau(   2) = (  0.5046830  0.4766670  0.7500000  )
+         3           Cs  tau(   3) = (  0.9953170  0.9766670  0.2500000  )
+         4           Cs  tau(   4) = (  0.4953170  0.5233330  0.2500000  )
+         5           Sn  tau(   5) = (  0.5000000  0.0000000  0.0000000  )
+         6           Sn  tau(   6) = (  0.0000000  0.5000000  0.5000000  )
+         7           Sn  tau(   7) = (  0.0000000  0.5000000  0.0000000  )
+         8           Sn  tau(   8) = (  0.5000000  0.0000000  0.5000000  )
+         9           I   tau(   9) = (  0.7030980  0.7036720  0.9924360  )
+        10           I   tau(  10) = (  0.2969020  0.2963280  0.4924360  )
+        11           I   tau(  11) = (  0.7030980  0.7036720  0.5075640  )
+        12           I   tau(  12) = (  0.2969020  0.2963280  0.0075640  )
+        13           I   tau(  13) = (  0.5026480  0.9800180  0.2500000  )
+        14           I   tau(  14) = (  0.2030980  0.7963280  0.5075640  )
+        15           I   tau(  15) = (  0.9973520  0.4800180  0.7500000  )
+        16           I   tau(  16) = (  0.7969020  0.2036720  0.4924360  )
+        17           I   tau(  17) = (  0.7969020  0.2036720  0.0075640  )
+        18           I   tau(  18) = (  0.4973520  0.0199820  0.7500000  )
+        19           I   tau(  19) = (  0.0026480  0.5199820  0.2500000  )
+        20           I   tau(  20) = (  0.2030980  0.7963280  0.9924360  )
+
+     number of k points=     2
+                       cart. coord. in units 2pi/alat
+        k(    1) = (   0.2500000   0.2460822   0.1724140), wk =   0.5000000
+        k(    2) = (  -0.2500000   0.2460822  -0.1724140), wk =   0.5000000
+
+                       cryst. coord.
+        k(    1) = (   0.2500000   0.2500000   0.2500000), wk =   0.5000000
+        k(    2) = (  -0.2500000   0.2500000  -0.2500000), wk =   0.5000000
+
+     Dense  grid:  1643381 G-vectors     FFT dimensions: ( 135, 135, 192)
+
+     Smooth grid:  1175773 G-vectors     FFT dimensions: ( 120, 120, 180)
+
+     Estimated max dynamical RAM per process >     296.88Mb
+
+     Estimated total allocated dynamical RAM >   14250.14Mb
+
+     Initial potential from superposition of free atoms
+
+     starting charge  175.84164, renormalised to  176.00000

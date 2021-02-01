@@ -16,8 +16,8 @@
     A = 4.665212, 
     nat = 8, 
     ntyp = 2,
-    ecutwfc = 70 ,
-    ecutrho = 350,
+    ecutwfc = 80 ,
+    ecutrho = 400,
     noncolin=.true.,
     lspinorb=.true.,
 /

@@ -20,6 +20,7 @@
     ecutrho = 200,
     noncolin=.true.,
     lspinorb=.true.,
+    nbnd=20
 /
  &ELECTRONS
     conv_thr = 1.0d-6,
