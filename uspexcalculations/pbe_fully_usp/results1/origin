@@ -1,0 +1,5 @@
+ ID    Origin    Enthalpy   Parent-E   Parent-ID
+   1   Random    -1068.765  -1068.765  [         0]
+   2   Random    -1047.011  -1047.011  [         0]
+   3   RandTop   -1071.046  -1071.046  [         0]
+   4   RandTop   -1071.689  -1071.689  [         0]

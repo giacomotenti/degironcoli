@@ -1,0 +1,52 @@
+******************************************
+*      TYPE OF RUN AND SYSTEM            *
+******************************************
+USPEX  : calculationMethod (USPEX, VCNEB, META)
+300    : calculationType (dimension: 0-3; molecule: 0/1; varcomp: 0/1)
+1      : AutoFrac
+
+% optType
+1
+% EndOptType
+
+% atomType
+C
+% EndAtomType
+
+% numSpecies
+8
+% EndNumSpecies
+******************************************
+*               POPULATION               *
+******************************************
+20    : populationSize 
+20    : initialPopSize 
+20    : numGenerations 
+8     : stopCrit 
+0     : reoptOld 
+0.6   : bestFrac 
+******************************************
+*          VARIATION OPERATORS           *
+******************************************
+0.50  : fracGene 
+0.30  : fracAtomsMut 
+0.20  : fracRand 
+0.00  : fracPerm 
+0.00  : fracLatMut
+*****************************************
+*   DETAILS OF AB INITIO CALCULATIONS   * 
+*****************************************
+% abinitioCode 
+8 8 8 8 
+% ENDabinit
+
+% KresolStart
+0.16 0.14 0.12 0.10
+% Kresolend
+
+% commandExecutable
+mpirun pw.x < qe.in > output
+% EndExecutable
+
+20     : numParallelCalcs
+1      : whichCluster

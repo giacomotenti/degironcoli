@@ -1,0 +1,79 @@
+*------------------------------------------------------------------------------*
+|                                                                              |
+|             _|    _|     _|_|_|   _|_|_|     _|_|_|_|   _|      _|           |
+|             _|    _|   _|         _|    _|   _|           _|  _|             |
+|             _|    _|     _|_|     _|_|_|     _|_|_|         _|               |
+|             _|    _|         _|   _|         _|           _|  _|             |
+|               _|_|     _|_|_|     _|         _|_|_|_|   _|      _|           |
+|                                                                              |
+|                          version 10.4.1 (01/12/2020)                         |
+|                                                                              |
+|             Evolutionary Algorithm Code for Structure Prediction             |
+|                      more info at http://uspex-team.org/                     |
+|                 report the bugs to : bugreport@uspex-team.org                |
+|                                                                              |
+*------------------------------------------------------------------------------*
+*------------------------------------------------------------------------------*
+|                  Please cite the following suggested papers                  |
+|               when you publish the results obtained from USPEX:              |
+*------------------------------------------------------------------------------*
+*------------------------------------------------------------------------------*
+|  Oganov A.R., Glass C.W. (2006). Crystal structure prediction                |
+|  using ab initio evolutionary techniques: Principles and applications.       |
+|  J. Chem. Phys. 124, 244704                                                  |
+|                                                                              |
+|  Oganov A.R., Stokes H., Valle M. (2011)                                     |
+|  How evolutionary crystal structure prediction works - and why.              |
+|  Acc. Chem. Res. 44, 227-237                                                 |
+|                                                                              |
+|  Lyakhov A.O., Oganov A.R., Stokes H., Zhu Q. (2013)                         |
+|  New developments in evolutionary structure prediction algorithm USPEX.      |
+|  Comp. Phys. Comm., 184, 1172-1182                                           |
+*------------------------------------------------------------------------------*
+-------------------- Random topological structure generator --------------------
+*------------------------------------------------------------------------------*
+|  Bushlanov P.V., Blatov V.A., Oganov A.R. (2019).                            |
+|  Topology-based crystal structure generator.                                 |
+|  Comp. Phys. Comm., DOI: 10.1016/j.cpc.2018.09.016.                          |
+*------------------------------------------------------------------------------*
+            Job Starts at                 15-Feb-2021 11:26:07
+------------------------- Block for system description -------------------------
+                        Dimensionality  :   3
+                        Molecular       :   0 (1:Yes, 0,No)
+                   Variable Composition :   0 (1:Yes, 0,No)
+------------------------- Block for atomic description -------------------------
+    There are 3 types of atoms in the system:    Cs   Sn    I
+    Minimum distances:                    Cs: 1.20  1.20  1.20  
+    Minimum distances:                    Sn: 1.20  1.20  1.20  
+    Minimum distances:                     I: 1.20  1.20  1.20  
+
+           Good Bonds:                    Cs: 0.05  0.12  0.07  
+           Good Bonds:                    Sn: 0.12  0.30  0.17  
+           Good Bonds:                     I: 0.07  0.17  0.10  
+
+            valences                        : 1.00  4.00  1.00  
+    The investigated system is: Cs_ 4  Sn_ 4   I_12  
+----------------------- Block for evolutionary algorithm -----------------------
+                 Number of Generations  :      10
+               Initial Population Size  :      10
+               General Population Size  :      10
+---------------------------- AB INITIO CALCULATIONS ----------------------------
+*  External Pressure is : 0.0000  GPa*
+
+* This is a fixed lattice calculation 
+ 8.866   0.000   0.000 
+ 0.000   8.601   0.000 
+ 0.000   0.000  12.676 
+
+*  There are  1 local relaxation steps for each individual structure  *
+Step  Abinitio Code    K-resolution 
+  1     PWSCF              0.040
+
+The script for job submission is prepared seperately in Submission/*_local.py
+  20 parallel calculations are performed simutaneously
+
+  ID   Origin     Composition  Enthalpy(eV)  Volume(A^3)  KPOINTS  SYMMETRY
+   1   Random    [   4  4 12 ] -21375.291    966.620   [ 3  3  2]   51
+   2   Random    [   4  4 12 ] -20940.224    966.623   [ 4  4  2]  191
+   3   RandTop   [   4  4 12 ] -21420.926    966.623   [ 3  3  2]  123
+   4   RandTop   [   4  4 12 ] -21433.789    966.623   [ 3  3  2]  131

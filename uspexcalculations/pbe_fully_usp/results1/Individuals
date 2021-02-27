@@ -1,0 +1,6 @@
+Gen   ID    Origin   Composition    Enthalpy   Volume  Density   Fitness   KPOINTS  SYMM  Q_entr A_order S_order Magmoment-Type
+                                      (eV)     (A^3)   (g/cm^3)
+  1    1   Random    [   4  4 12 ] -21375.291   966.620   4.345     N/A    [ 3  3  2]  51  0.091  4.087  3.914
+  1    2   Random    [   4  4 12 ] -20940.224   966.623   4.345     N/A    [ 4  4  2] 191  0.000  6.429  6.463
+  1    3   RandTop   [   4  4 12 ] -21420.926   966.623   4.345     N/A    [ 3  3  2] 123  0.056  6.108  5.760
+  1    4   RandTop   [   4  4 12 ] -21433.789   966.623   4.345     N/A    [ 3  3  2] 131  0.088  4.470  3.989

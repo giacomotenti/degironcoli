@@ -1,0 +1,72 @@
+&CONTROL
+    title = 'perovskite', 
+    calculation = 'vc-relax',
+    restart_mode = 'from_scratch',
+    verbosity = 'medium',
+    prefix = 'CsSnI3',
+    wf_collect = .false.,
+    outdir = './',
+    pseudo_dir = './',
+    tprnfor = .true.,
+    tstress = .true.,
+    forc_conv_thr=1.d-4,
+    max_seconds = 42500,
+/
+
+
+
+ &SYSTEM
+nat = 20
+ntyp = 3
+    ibrav = 0,
+    nat = 20, 
+    ntyp = 3,
+    ecutwfc= 80,
+    ecutrho= 320,
+    noncolin=.true.,
+    lspinorb=.true.,
+/
+ &ELECTRONS
+    conv_thr = 1.0d-7,
+    diagonalization = 'david',
+    mixing_beta = 0.6,
+/
+ &IONS
+    ion_dynamics = 'bfgs',
+/
+
+ &CELL
+    cell_dynamics = 'bfgs',
+/
+ATOMIC_SPECIES
+   Sn 118.7  Sn.rel-pbe-dn-rrkjus_psl.1.0.0.UPF
+   I  126.9  I.rel-pbe-n-rrkjus_psl.0.2.2.UPF 
+   Cs 132.9  Cs.rel-pbe-spn-rrkjus_psl.1.0.0.UPF
+
+CELL_PARAMETERS bohr
+ 16.7543   0.0000   0.0000
+  0.0000  16.2535   0.0000
+  0.0000   0.0000  23.9541
+ATOMIC_POSITIONS {crystal} 
+  Cs       0.250000     0.727298     0.978340
+  Cs       0.750000     0.272702     0.021660
+  Cs       0.750000     0.727298     0.021660
+  Cs       0.250000     0.272702     0.978340
+  Sn       0.384089     0.000000     0.036438
+  Sn       0.884089     0.000000     0.963562
+  Sn       0.615911     0.000000     0.963562
+  Sn       0.115911     0.000000     0.036438
+   I       0.618540     0.786779     0.355363
+   I       0.118540     0.213221     0.644637
+   I       0.381460     0.786779     0.644637
+   I       0.881460     0.213221     0.355363
+   I       0.381460     0.213221     0.644637
+   I       0.881460     0.786779     0.355363
+   I       0.618540     0.213221     0.355363
+   I       0.118540     0.786779     0.644637
+   I       0.106392     0.000000     0.163683
+   I       0.606392     0.000000     0.836317
+   I       0.893608     0.000000     0.836317
+   I       0.393608     0.000000     0.163683
+K_POINTS {automatic} 
+   3    3    2  0 0 0
