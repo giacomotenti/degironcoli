@@ -37,24 +37,24 @@ Cs Sn I
 *   DETAILS OF AB INITIO CALCULATIONS   *
 *****************************************
 % Latticevalues
-   8.866209776   0.000000000   0.000000000
-   0.000000000   8.600933962   0.000000000
+   12.866209776   0.000000000   0.000000000
+   0.000000000   12.600933962   0.000000000
    0.000000000   0.000000000  12.675709608
 %Endvalues
 
 % abinitioCode
-8
+8 8
 % ENDabinit
 
 % KresolStart
-0.04
+0.04 0.04
 % Kresolend
 
 % commandExecutable
 mpirun -n 32 pw.x < qe.in > output
 % EndExecutable
 
-20     : numParallelCalcs
+10     : numParallelCalcs
 1      : whichCluster
                                                                                                                             58,1          Bot
 

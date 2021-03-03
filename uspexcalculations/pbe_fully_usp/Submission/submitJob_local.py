@@ -31,13 +31,13 @@ def submitJob_local(index, commnadExecutable):
 #SBATCH --account=Sis20_baroni
 #SBATCH --partition=skl_usr_prod
 #SBATCH --job-name={}
-##SBATCH --mail-user=afiorent@sissa.it
+#SBATCH --mail-user=afiorent@sissa.it
 #SBATCH --mail-type=ALL
 
 #umask -S u=rwx,g=r,o=r
 module purge
 module load profile/phys
-module load autoload qe/6.3
+module load autoload qe/6.7
 env
 
 {}

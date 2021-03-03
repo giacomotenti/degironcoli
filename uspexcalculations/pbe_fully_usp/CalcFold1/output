@@ -1,0 +1,448 @@
+
+     Program PWSCF v.6.7MaX starts on  1Mar2021 at 19:34:20 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI & OpenMP), running on      32 processor cores
+     Number of MPI processes:                32
+     Threads/MPI process:                     1
+
+     MPI processes distributed on     1 nodes
+     R & G space division:  proc/nbgrp/npool/nimage =      32
+     Waiting for input...
+     Reading input from standard input
+Warning: card  &CELL ignored
+Warning: card     CELL_DYNAMICS = 'BFGS', ignored
+Warning: card / ignored
+
+     Current dimensions of program PWSCF are:
+     Max number of different atomic species (ntypx) = 10
+     Max number of k-points (npk) =  40000
+     Max angular momentum in pseudopotentials (lmaxx) =  3
+     file Sn.rel-pbe-dn-rrkjus_psl.1.0.0.UPF: wavefunction(s)  5S 4D 4D renormalized
+     file I.rel-pbe-n-rrkjus_psl.1.0.0.UPF: wavefunction(s)  5S renormalized
+     file Cs.rel-pbe-spn-rrkjus_psl.1.0.0.UPF: wavefunction(s)  5S 6S renormalized
+
+     Subspace diagonalization in iterative solution of the eigenvalue problem:
+     one sub-group per band group will be used
+     scalapack distributed-memory algorithm (size of sub-group:  5*  5 procs)
+
+     Message from routine setup:
+     using ibrav=0 with symmetry is DISCOURAGED, use correct ibrav instead
+ 
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min         579     464    122                58542    41898    5645
+     Max         581     465    124                58547    41901    5648
+     Sum       18545   14849   3909              1873423  1340783  180705
+ 
+
+     Title: 
+     perovskite                                                                 
+
+
+     bravais-lattice index     =            0
+     lattice parameter (alat)  =      24.1450  a.u.
+     unit-cell volume          =   13868.2441 (a.u.)^3
+     number of atoms/cell      =           20
+     number of atomic types    =            3
+     number of electrons       =       176.00
+     number of Kohn-Sham states=          200
+     kinetic-energy cutoff     =      80.0000  Ry
+     charge density cutoff     =     400.0000  Ry
+     scf convergence threshold =      1.0E-06
+     mixing beta               =       0.5000
+     number of iterations used =            8  plain     mixing
+     energy convergence thresh.=      1.0E-04
+     force convergence thresh. =      1.0E-02
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+     nstep                     =           50
+
+     Non magnetic calculation with spin-orbit
+
+
+     celldm(1)=  24.145000  celldm(2)=   0.000000  celldm(3)=   0.000000
+     celldm(4)=   0.000000  celldm(5)=   0.000000  celldm(6)=   0.000000
+
+     crystal axes: (cart. coord. in units of alat)
+               a(1) = (   1.000000   0.000000   0.000000 )  
+               a(2) = (   0.000000   1.000000   0.000000 )  
+               a(3) = (   0.000000   0.000000   0.985235 )  
+
+     reciprocal axes: (cart. coord. in units 2 pi/alat)
+               b(1) = (  1.000000  0.000000  0.000000 )  
+               b(2) = (  0.000000  1.000000  0.000000 )  
+               b(3) = (  0.000000  0.000000  1.014986 )  
+
+
+     PseudoPot. # 1 for Sn read from file:
+     ./Sn.rel-pbe-dn-rrkjus_psl.1.0.0.UPF
+     MD5 check sum: e9415cc9ba1036dfb73502962f03961a
+     Pseudo is Ultrasoft + core correction, Zval = 14.0
+     Generated using &quot;atomic&quot; code by A. Dal Corso  v.6.3
+     Using radial grid of 1243 points, 10 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+                l(5) =   1
+                l(6) =   1
+                l(7) =   2
+                l(8) =   2
+                l(9) =   2
+               l(10) =   2
+     Q(r) pseudized with 0 coefficients 
+
+
+     PseudoPot. # 2 for I  read from file:
+     ./I.rel-pbe-n-rrkjus_psl.1.0.0.UPF
+     MD5 check sum: 6d021d2aa93960f239bd8adb25ac3fd1
+     Pseudo is Ultrasoft + core correction, Zval =  7.0
+     Generated using &quot;atomic&quot; code by A. Dal Corso  v.6.3
+     Using radial grid of 1247 points, 10 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+                l(5) =   1
+                l(6) =   1
+                l(7) =   2
+                l(8) =   2
+                l(9) =   2
+               l(10) =   2
+     Q(r) pseudized with 0 coefficients 
+
+
+     PseudoPot. # 3 for Cs read from file:
+     ./Cs.rel-pbe-spn-rrkjus_psl.1.0.0.UPF
+     MD5 check sum: 92f45d5fced885c1284380ec35df8368
+     Pseudo is Ultrasoft + core correction, Zval =  9.0
+     Generated using &quot;atomic&quot; code by A. Dal Corso  v.6.4.1
+     Using radial grid of 1251 points, 15 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   0
+                l(4) =   1
+                l(5) =   1
+                l(6) =   1
+                l(7) =   1
+                l(8) =   2
+                l(9) =   2
+               l(10) =   2
+               l(11) =   2
+               l(12) =   3
+               l(13) =   3
+               l(14) =   3
+               l(15) =   3
+     Q(r) pseudized with 0 coefficients 
+
+
+     atomic species   valence    mass     pseudopotential
+        Sn            14.00   118.70000     Sn( 1.00)
+        I              7.00   126.90000     I ( 1.00)
+        Cs             9.00   132.90000     Cs( 1.00)
+
+      8 Sym. Ops., with inversion, found ( 4 have fractional translation)
+
+
+                                    s                        frac. trans.
+
+      isym =  1     identity                                     
+
+ cryst.   s( 1) = (     1          0          0      )
+                  (     0          1          0      )
+                  (     0          0          1      )
+
+ cart.    s( 1) = (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+
+
+      isym =  2     180 deg rotation - cart. axis [0,0,1]        
+
+ cryst.   s( 2) = (    -1          0          0      )
+                  (     0         -1          0      )
+                  (     0          0          1      )
+
+ cart.    s( 2) = ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+
+
+      isym =  3      90 deg rotation - cart. axis [0,0,-1]       
+
+ cryst.   s( 3) = (     0         -1          0      )    f =(  0.0000000 )
+                  (     1          0          0      )       (  0.0000000 )
+                  (     0          0          1      )       ( -0.5000000 )
+
+ cart.    s( 3) = (  0.0000000  1.0000000  0.0000000 )    f =(  0.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )       (  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )       ( -0.4926175 )
+
+
+      isym =  4      90 deg rotation - cart. axis [0,0,1]        
+
+ cryst.   s( 4) = (     0          1          0      )    f =(  0.0000000 )
+                  (    -1          0          0      )       (  0.0000000 )
+                  (     0          0          1      )       ( -0.5000000 )
+
+ cart.    s( 4) = (  0.0000000 -1.0000000  0.0000000 )    f =(  0.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )       (  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )       ( -0.4926175 )
+
+
+      isym =  5     inversion                                    
+
+ cryst.   s( 5) = (    -1          0          0      )
+                  (     0         -1          0      )
+                  (     0          0         -1      )
+
+ cart.    s( 5) = ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+
+
+      isym =  6     inv. 180 deg rotation - cart. axis [0,0,1]   
+
+ cryst.   s( 6) = (     1          0          0      )
+                  (     0          1          0      )
+                  (     0          0         -1      )
+
+ cart.    s( 6) = (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+
+
+      isym =  7     inv.  90 deg rotation - cart. axis [0,0,-1]  
+
+ cryst.   s( 7) = (     0          1          0      )    f =(  0.0000000 )
+                  (    -1          0          0      )       (  0.0000000 )
+                  (     0          0         -1      )       (  0.5000000 )
+
+ cart.    s( 7) = (  0.0000000 -1.0000000  0.0000000 )    f =(  0.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )       (  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )       (  0.4926175 )
+
+
+      isym =  8     inv.  90 deg rotation - cart. axis [0,0,1]   
+
+ cryst.   s( 8) = (     0         -1          0      )    f =(  0.0000000 )
+                  (     1          0          0      )       (  0.0000000 )
+                  (     0          0         -1      )       (  0.5000000 )
+
+ cart.    s( 8) = (  0.0000000  1.0000000  0.0000000 )    f =(  0.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )       (  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )       (  0.4926175 )
+
+
+   Cartesian axes
+
+     site n.     atom                  positions (alat units)
+         1           Cs  tau(   1) = (   0.8781840   0.6446960   0.0000000  )
+         2           Cs  tau(   2) = (   0.1218160   0.3553040   0.0000000  )
+         3           Cs  tau(   3) = (   0.3553040   0.8781840   0.4926175  )
+         4           Cs  tau(   4) = (   0.6446960   0.1218160   0.4926175  )
+         5           Sn  tau(   5) = (   0.0099630   0.3698870   0.0000000  )
+         6           Sn  tau(   6) = (   0.9900370   0.6301130   0.0000000  )
+         7           Sn  tau(   7) = (   0.6301130   0.0099630   0.4926175  )
+         8           Sn  tau(   8) = (   0.3698870   0.9900370   0.4926175  )
+         9           I   tau(   9) = (   0.1753250   0.1931320   0.0000000  )
+        10           I   tau(  10) = (   0.8246750   0.8068680   0.0000000  )
+        11           I   tau(  11) = (   0.8068680   0.1753250   0.4926175  )
+        12           I   tau(  12) = (   0.1931320   0.8246750   0.4926175  )
+        13           I   tau(  13) = (   0.0535550   0.4138170   0.1211750  )
+        14           I   tau(  14) = (   0.9464450   0.5861830   0.1211750  )
+        15           I   tau(  15) = (   0.5861830   0.0535550   0.6137926  )
+        16           I   tau(  16) = (   0.4138170   0.9464450   0.6137926  )
+        17           I   tau(  17) = (   0.9464450   0.5861830   0.8640600  )
+        18           I   tau(  18) = (   0.0535550   0.4138170   0.8640600  )
+        19           I   tau(  19) = (   0.4138170   0.9464450   0.3714425  )
+        20           I   tau(  20) = (   0.5861830   0.0535550   0.3714425  )
+
+   Crystallographic axes
+
+     site n.     atom                  positions (cryst. coord.)
+         1           Cs  tau(   1) = (  0.8781840  0.6446960  0.0000000  )
+         2           Cs  tau(   2) = (  0.1218160  0.3553040  0.0000000  )
+         3           Cs  tau(   3) = (  0.3553040  0.8781840  0.5000000  )
+         4           Cs  tau(   4) = (  0.6446960  0.1218160  0.5000000  )
+         5           Sn  tau(   5) = (  0.0099630  0.3698870  0.0000000  )
+         6           Sn  tau(   6) = (  0.9900370  0.6301130  0.0000000  )
+         7           Sn  tau(   7) = (  0.6301130  0.0099630  0.5000000  )
+         8           Sn  tau(   8) = (  0.3698870  0.9900370  0.5000000  )
+         9           I   tau(   9) = (  0.1753250  0.1931320  0.0000000  )
+        10           I   tau(  10) = (  0.8246750  0.8068680  0.0000000  )
+        11           I   tau(  11) = (  0.8068680  0.1753250  0.5000000  )
+        12           I   tau(  12) = (  0.1931320  0.8246750  0.5000000  )
+        13           I   tau(  13) = (  0.0535550  0.4138170  0.1229910  )
+        14           I   tau(  14) = (  0.9464450  0.5861830  0.1229910  )
+        15           I   tau(  15) = (  0.5861830  0.0535550  0.6229910  )
+        16           I   tau(  16) = (  0.4138170  0.9464450  0.6229910  )
+        17           I   tau(  17) = (  0.9464450  0.5861830  0.8770090  )
+        18           I   tau(  18) = (  0.0535550  0.4138170  0.8770090  )
+        19           I   tau(  19) = (  0.4138170  0.9464450  0.3770090  )
+        20           I   tau(  20) = (  0.5861830  0.0535550  0.3770090  )
+
+     number of k points=     6  Marzari-Vanderbilt smearing, width (Ry)=  0.0200
+                       cart. coord. in units 2pi/alat
+        k(    1) = (   0.0000000   0.0000000   0.0000000), wk =   0.1250000
+        k(    2) = (   0.0000000   0.0000000  -0.5074931), wk =   0.1250000
+        k(    3) = (   0.0000000  -0.5000000   0.0000000), wk =   0.2500000
+        k(    4) = (   0.0000000  -0.5000000  -0.5074931), wk =   0.2500000
+        k(    5) = (  -0.5000000  -0.5000000   0.0000000), wk =   0.1250000
+        k(    6) = (  -0.5000000  -0.5000000  -0.5074931), wk =   0.1250000
+
+                       cryst. coord.
+        k(    1) = (   0.0000000   0.0000000   0.0000000), wk =   0.1250000
+        k(    2) = (   0.0000000   0.0000000  -0.5000000), wk =   0.1250000
+        k(    3) = (   0.0000000  -0.5000000   0.0000000), wk =   0.2500000
+        k(    4) = (   0.0000000  -0.5000000  -0.5000000), wk =   0.2500000
+        k(    5) = (  -0.5000000  -0.5000000   0.0000000), wk =   0.1250000
+        k(    6) = (  -0.5000000  -0.5000000  -0.5000000), wk =   0.1250000
+
+     Dense  grid:  1873423 G-vectors     FFT dimensions: ( 160, 160, 160)
+
+     Smooth grid:  1340783 G-vectors     FFT dimensions: ( 144, 144, 144)
+
+     Dynamical RAM for                 wfc:      31.96 MB
+
+     Dynamical RAM for     wfc (w. buffer):     223.71 MB
+
+     Dynamical RAM for           str. fact:       2.68 MB
+
+     Dynamical RAM for           local pot:       0.00 MB
+
+     Dynamical RAM for          nlocal pot:      63.60 MB
+
+     Dynamical RAM for                qrad:      38.53 MB
+
+     Dynamical RAM for          rho,v,vnew:      22.44 MB
+
+     Dynamical RAM for               rhoin:       7.48 MB
+
+     Dynamical RAM for            rho*nmix:      57.17 MB
+
+     Dynamical RAM for           G-vectors:       3.67 MB
+
+     Dynamical RAM for          h,s,v(r/c):       0.29 MB
+
+     Dynamical RAM for          <psi|beta>:       4.86 MB
+
+     Dynamical RAM for                 psi:      63.92 MB
+
+     Dynamical RAM for                hpsi:      63.92 MB
+
+     Dynamical RAM for                spsi:      63.92 MB
+
+     Dynamical RAM for      wfcinit/wfcrot:      50.85 MB
+
+     Dynamical RAM for           addusdens:    1835.85 MB
+
+     Dynamical RAM for          addusforce:    1856.50 MB
+
+     Dynamical RAM for         addusstress:    1851.93 MB
+
+     Estimated static dynamical RAM per process >     430.66 MB
+
+     Estimated max dynamical RAM per process >       2.23 GB
+
+     Estimated total dynamical RAM >      71.47 GB
+
+     Initial potential from superposition of free atoms
+
+     starting charge  175.83606, renormalised to  176.00000
+
+     negative rho (up, down):  2.814E-04 0.000E+00
+     Starting wfcs are  208 randomized atomic wfcs
+
+     total cpu time spent up to now is       30.5 secs
+
+     Self-consistent Calculation
+
+     iteration #  1     ecut=    80.00 Ry     beta= 0.50
+     Davidson diagonalization with overlap
+     ethr =  1.00E-02,  avg # of iterations = 14.0
+
+     negative rho (up, down):  2.871E+03 0.000E+00
+
+     total cpu time spent up to now is      168.5 secs
+
+     WARNING: integrated charge=   175.96931313, expected=   176.00000000
+
+     total energy              = 5270061.96202205 Ry
+     estimated scf accuracy    < 7033148.84819485 Ry
+
+     iteration #  2     ecut=    80.00 Ry     beta= 0.50
+     Davidson diagonalization with overlap
+     c_bands:  1 eigenvalues not converged
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     Error in routine  cdiaghg (300):
+      problems computing cholesky
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+     stopping ...
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     Error in routine  cdiaghg (300):
+      problems computing cholesky
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+     stopping ...
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     Error in routine  cdiaghg (300):
+      problems computing cholesky
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+     stopping ...
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     Error in routine  cdiaghg (300):
+      problems computing cholesky
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+     stopping ...
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     Error in routine  cdiaghg (300):
+      problems computing cholesky
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+     stopping ...
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     Error in routine  cdiaghg (300):
+      problems computing cholesky
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+     stopping ...
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     Error in routine  cdiaghg (300):
+      problems computing cholesky
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+     stopping ...
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     Error in routine  cdiaghg (300):
+      problems computing cholesky
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+     stopping ...
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     Error in routine  cdiaghg (300):
+      problems computing cholesky
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+     stopping ...

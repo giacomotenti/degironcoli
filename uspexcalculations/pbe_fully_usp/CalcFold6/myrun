@@ -7,13 +7,13 @@
 #SBATCH --account=Sis20_baroni
 #SBATCH --partition=skl_usr_prod
 #SBATCH --job-name=USPEX-6
-##SBATCH --mail-user=afiorent@sissa.it
+#SBATCH --mail-user=afiorent@sissa.it
 #SBATCH --mail-type=ALL
 
 #umask -S u=rwx,g=r,o=r
 module purge
 module load profile/phys
-module load autoload qe/6.3
+module load autoload qe/6.7
 env
 
 mpirun -n 32 pw.x < qe.in > output

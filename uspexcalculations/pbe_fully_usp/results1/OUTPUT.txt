@@ -36,7 +36,7 @@
 |  Topology-based crystal structure generator.                                 |
 |  Comp. Phys. Comm., DOI: 10.1016/j.cpc.2018.09.016.                          |
 *------------------------------------------------------------------------------*
-            Job Starts at                 15-Feb-2021 11:26:07
+            Job Starts at                 01-Mar-2021 19:31:45
 ------------------------- Block for system description -------------------------
                         Dimensionality  :   3
                         Molecular       :   0 (1:Yes, 0,No)
@@ -61,19 +61,16 @@
 *  External Pressure is : 0.0000  GPa*
 
 * This is a fixed lattice calculation 
- 8.866   0.000   0.000 
- 0.000   8.601   0.000 
+12.866   0.000   0.000 
+ 0.000  12.601   0.000 
  0.000   0.000  12.676 
 
-*  There are  1 local relaxation steps for each individual structure  *
+*  There are  2 local relaxation steps for each individual structure  *
 Step  Abinitio Code    K-resolution 
   1     PWSCF              0.040
+  2     PWSCF              0.040
 
 The script for job submission is prepared seperately in Submission/*_local.py
-  20 parallel calculations are performed simutaneously
+  10 parallel calculations are performed simutaneously
 
   ID   Origin     Composition  Enthalpy(eV)  Volume(A^3)  KPOINTS  SYMMETRY
-   1   Random    [   4  4 12 ] -21375.291    966.620   [ 3  3  2]   51
-   2   Random    [   4  4 12 ] -20940.224    966.623   [ 4  4  2]  191
-   3   RandTop   [   4  4 12 ] -21420.926    966.623   [ 3  3  2]  123
-   4   RandTop   [   4  4 12 ] -21433.789    966.623   [ 3  3  2]  131
