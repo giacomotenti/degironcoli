@@ -1,5 +1,5 @@
 
-     Program PWSCF v.6.7MaX starts on 11Mar2021 at 22: 1:52 
+     Program PWSCF v.6.7MaX starts on 13Mar2021 at 17:11:25 
 
      This program is part of the open-source Quantum ESPRESSO suite
      for quantum simulation of materials; please cite
@@ -29,14 +29,14 @@
      Subspace diagonalization in iterative solution of the eigenvalue problem:
      a serial algorithm will be used
 
-
+ 
      Parallelization info
      --------------------
      sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
      Min         240     160     41                48820    26566    3489
      Max         241     161     42                48827    26576    3498
      Sum       11537    7681   1983              2343561  1275409  167705
-
+ 
 
      Title: 
      CsSnI3                                                                     
@@ -52,7 +52,7 @@
      kinetic-energy cutoff     =     130.0000  Ry
      charge density cutoff     =     780.0000  Ry
      scf convergence threshold =      1.0E-06
-     mixing beta               =       0.3500
+     mixing beta               =       0.4500
      number of iterations used =            8  plain     mixing
      Exchange-correlation= PBESOL
                            (   1   4  10   8   0   0   0)
@@ -74,7 +74,7 @@
 
 
      PseudoPot. # 1 for Cs read from file:
-     /scratch/cmalosso/degironcoli/pseudo/pseudo-usp/Cs.rel-pbesol-spn-rrkjus_psl.1.0.0.UPF
+     /marconi_scratch/userexternal/cmalosso/degironcoli/pseudo/pseudo-usp/Cs.rel-pbesol-spn-rrkjus_psl.1.0.0.UPF
      MD5 check sum: 846889b67fb1b19751b5b37931589d70
      Pseudo is Ultrasoft + core correction, Zval =  9.0
      Generated using &quot;atomic&quot; code by A. Dal Corso  v.6.4.1
@@ -98,7 +98,7 @@
 
 
      PseudoPot. # 2 for Sn read from file:
-     /scratch/cmalosso/degironcoli/pseudo/pseudo-usp/Sn.rel-pbesol-dn-rrkjus_psl.1.0.0.UPF
+     /marconi_scratch/userexternal/cmalosso/degironcoli/pseudo/pseudo-usp/Sn.rel-pbesol-dn-rrkjus_psl.1.0.0.UPF
      MD5 check sum: c1cf6ea56b96a3656bdf0d1db379e093
      Pseudo is Ultrasoft + core correction, Zval = 14.0
      Generated using &quot;atomic&quot; code by A. Dal Corso  v.6.3
@@ -117,7 +117,7 @@
 
 
      PseudoPot. # 3 for I  read from file:
-     /scratch/cmalosso/degironcoli/pseudo/pseudo-usp/I.rel-pbesol-n-rrkjus_psl.1.0.0.UPF
+     /marconi_scratch/userexternal/cmalosso/degironcoli/pseudo/pseudo-usp/I.rel-pbesol-n-rrkjus_psl.1.0.0.UPF
      MD5 check sum: 0f96c6bfb1b448f280658f96eb466b08
      Pseudo is Ultrasoft + core correction, Zval =  7.0
      Generated using &quot;atomic&quot; code by A. Dal Corso  v.6.3
@@ -371,3 +371,26 @@ G_5-   2.00 -2.00  0.00  0.00  0.00 -2.00  2.00  0.00  0.00  0.00
      Initial potential from superposition of free atoms
 
      starting charge  175.84164, renormalised to  176.00000
+     Starting wfcs are  208 randomized atomic wfcs
+
+     total cpu time spent up to now is      113.2 secs
+
+     Self-consistent Calculation
+
+     iteration #  1     ecut=   130.00 Ry     beta= 0.45
+     Davidson diagonalization with overlap
+     ethr =  1.00E-02,  avg # of iterations =  1.0
+
+     Threshold (ethr) on eigenvalues was too large:
+     Diagonalizing with lowered threshold
+
+     Davidson diagonalization with overlap
+     ethr =  3.10E-04,  avg # of iterations =  3.0
+
+     total cpu time spent up to now is      650.7 secs
+
+     total energy              =   -1267.98007120 Ry
+     estimated scf accuracy    <       0.46805248 Ry
+
+     iteration #  2     ecut=   130.00 Ry     beta= 0.45
+     Davidson diagonalization with overlap

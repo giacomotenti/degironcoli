@@ -1,13 +1,14 @@
 #!/bin/bash
 #SBATCH --nodes=2
-#SBATCH --ntasks-per-node=32
+#SBATCH --ntasks-per-node=24
 #SBATCH --cpus-per-task=2
 #SBATCH --time=12:00:00
-#SBATCH --account=cmalosso
-#SBATCH --partition=regular2
+#SBATCH --account=Sis20_baroni
+#SBATCH --partition=skl_usr_prod
 #SBATCH --job-name=Perovskite
 
-source /home/cmalosso/moduli/moduli-qe.sh
+module purge
+source ~/moduli/moduli-qe.sh
 umask -S u=rwx,g=r,o=r
 
 cd ${SLURM_SUBMIT_DIR}
@@ -15,7 +16,7 @@ echo $SLURM_SUBMIT_DIR
 
 # Define number of processors to send to mpirun for MPICH
 NNODES=2
-PW_EXE="/home/cmalosso/qe-6.7/bin/pw.x"
+PW_EXE="/marconi/home/userexternal/cmalosso/qe-6.7/bin/pw.x"
 
 
 

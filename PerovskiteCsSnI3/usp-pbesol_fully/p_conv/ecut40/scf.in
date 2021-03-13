@@ -7,10 +7,9 @@
     wf_collect = .true.,
     outdir = './',
     wfcdir = './',
-    pseudo_dir = '/scratch/cmalosso/degironcoli/pseudo/pseudo-usp',
+    pseudo_dir = '/marconi_scratch/userexternal/cmalosso/degironcoli/pseudo/pseudo-usp',
     tprnfor = .true.,
     tstress = .true.,
-    forc_conv_thr=1.d-4,
 /
  &SYSTEM
     ibrav = 8,
@@ -27,7 +26,7 @@
  &ELECTRONS
     conv_thr = 1.0d-6,
     diagonalization = 'david',
-    mixing_beta = 0.35,
+    mixing_beta = 0.45,
 /
 
 ATOMIC_SPECIES
